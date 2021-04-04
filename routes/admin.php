@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\UserController;
 
 
-//Route::get('',[AdminController::class, 'index'])->names('admin.home');
+Route::get('',[HomeController::class, 'index'])->name('admin.home');
 
-Route::resource('users',AdminController::class)->names('admin.users');
+Route::resource('users',UserController::class)->names('admin.users');

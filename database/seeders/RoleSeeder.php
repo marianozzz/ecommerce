@@ -19,12 +19,13 @@ class RoleSeeder extends Seeder
        $admin   = Role::create(['name'=>'Admin']);
        $register =  Role::create(['name'=>'Register']);
 
-      Permission::create(['name' => 'admin.home']);
+     // Permission::create(['name' => 'admin.home'])->assignRole($admin);
+      Permission::create(['name' => 'admin.home'])->syncRoles([$admin]);
 
-      Permission::create(['name' => 'admin.users.index']);
-      Permission::create(['name' => 'admin.users.create']);
-      Permission::create(['name' => 'admin.users.edit']);
-      Permission::create(['name' => 'admin.users.destroy']);
+      Permission::create(['name' => 'admin.users.index'])->syncRoles([$admin]);
+      Permission::create(['name' => 'admin.users.create'])->syncRoles([$admin]);
+      Permission::create(['name' => 'admin.users.edit'])->syncRoles([$admin]);
+      Permission::create(['name' => 'admin.users.destroy'])->syncRoles([$admin]);
 
     }
 }

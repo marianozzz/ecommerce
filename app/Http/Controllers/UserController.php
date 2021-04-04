@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-       
+        return view('user.index');
     }
 
     /**
@@ -24,7 +24,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('user.create');
     }
 
     /**
@@ -55,9 +56,9 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('user.edit',compact('user'));
     }
 
     /**

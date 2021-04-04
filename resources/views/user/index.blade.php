@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Administracion')
+@section('title', 'Dashboard Usuarios')
 
 @section('content_header')
-    <h1>Lista de Usuarios</h1>
+    <h1>Inicio</h1>
 @stop
 
 @section('content')
-    @livewire('admin.users-index')
+    <p>Pagina de inicios de usuarios </p>
 @stop
 
 @section('css')
@@ -15,8 +15,5 @@
 @stop
 
 @section('js')
-
-
-@livewireScripts 
-
+    <script> console.log('Hi!'); </script>
 @stop
