@@ -16,10 +16,19 @@
 <style>
  body {
  font-family: 'Nunito', sans-serif;
-    }
+ }
+.footer {
+  
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 50px;
+}
+
 </style>
-    </head>
-    <body class="d-flex flex-column h-100">
+</head>
+
+    <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Navbar scroll</a>
@@ -71,7 +80,8 @@
               </div>
             </div>
         </nav>
-          
+
+     
     <div class="container-fluid mt-4">
         <div class="row  justify-content-center ">
             <div class="col-md-3 ">
@@ -100,11 +110,11 @@
             </div>
         </div>
     </div>
-    <footer class="footer mt-auto py-3 bg-dark ">
+
+    <footer class="footer mt-4 py-3 bg-dark fixed-bottom ">
         <div class="container">
           <span class="text-muted">Place sticky footer content here.</span>
         </div>
     </footer>
- 
     </body>
 </html>

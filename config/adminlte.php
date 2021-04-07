@@ -85,7 +85,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
 
@@ -232,7 +232,7 @@ return [
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'can'  => 'admin.home',
         ],
         [
             'text'        => 'Mensajes',
@@ -246,15 +246,16 @@ return [
         ],
         [
             'text' => 'Categorias',
-            'route'  => 'admin.users.index',
-            'icon' => 'fas fa-fw fa-user',
+            'route'  => 'admin.categories.index',
+            'icon' => 'fab fa-fw fa-buffer',
             'can'  => 'admin.users.index',
         ],
         [
             'text' => 'Etiquetas',
-            'route'  => 'admin.users.index',
-            'icon' => 'fas fa-fw fa-user',
+            'route'  => 'admin.tags.index',
+            'icon' => 'fas fa-fw fa-bookmark',
             'can'  => 'admin.users.index',
+            'active' => ['admin/tag*'],
         ],
         ['header' => 'USUARIOS',
          'can'   => 'admin.home' ,
